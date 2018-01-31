@@ -44,16 +44,10 @@
 
 	}
 
-	#map {
-        height: 600px;
-        width: 100%;
-        margin : 10px 10% 10px 40%;
-    	}
-
-	#logoutbutton
-	{
-		margin:8px 0px 0px 96%;
-	}
+#logoutbutton
+   {
+      margin:8px 0px 0px 96%;
+   }
 
 	#left
 	{
@@ -86,51 +80,45 @@
 
 
 	<dlv class = "collapsed navbar-brand-collapse" id = "bs-example-navbar-collapse-1">
-		<ul class = "nav navbar-nav">
-			
-			
-			<li><a href= "main.html">&nbsp; TIMELINE  &nbsp</a></li>
-			<li><a href= "photo.html">&nbsp PHOTOS &nbsp</a></li>
-			<li class = "active"><a href = "map.html">&nbsp MAP &nbsp <span class = "sr-only"></span></a></li>
-			<li><a href= "callendar.html" >&nbsp CALLENDAR &nbsp</a></li>
-			
+      <ul class = "nav navbar-nav">
+         
+         <li class = "active"><a href = "main.html">&nbsp TIMELINE &nbsp <span class = "sr-only"></span></a></li>
+         <li><a href= "photo.html">&nbsp PHOTOS &nbsp</a></li>
+         <li><a href= "map.html">&nbsp MAP &nbsp</a></li>
+         <li><a href= "callendar.html" >&nbsp CALLENDAR &nbsp</a></li>
+         
+         <li class = "dropdown">
+         </li>
 
 
-		</ul>
-		<div id="logoutbutton">
-			<form name="logout" action="logout.php" method="get">
-				<input type="image" src="images/button.png" alt="logout button" width="35" height="35">
-			</form>
-		</div>
-	</div>
+      </ul>
+      <div id="logoutbutton">
+         <form name="logout" action="logout.php" method="get">
+            <input type="image" src="images/off.png" alt="logout button" width="35" height="35">
+         </form>
+      </div>
+   </div>
 </nav>
 
 
-<div class ="row">
+<div class ="row"
+                     text-align     :left">
 	<div class = "col-md-6">
 <section id="cd-timeline">
-	<div class="cd-timeline-block">
-		
+	<div class="cd-timeline-block" style="vertical-align :middle;
+                     text-align     :right">
+		<div class="cd-timeline-img">
+			<img src="images/logo.png" alt="Picture">
+		</div> <!-- cd-timeline-img -->
  
-		<div class="cd-timeline-content">
-			<div id="map"></div>
-    <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMIfugPnD-r028_O-OrSd4y2AQoJG2LpU&callback=initMap">
-    </script>
-			
+		<div class="cd-timeline-content" style="vertical-align :middle;
+                     text-align     :left">
+
+
+			<h2>Title of section 1</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+			<a href="#" class="cd-read-more">Read more</a>
+			<span class="cd-date">Jan 14</span>
 		</div> <!-- cd-timeline-content -->
 	</div> <!-- cd-timeline-block -->
  
@@ -141,7 +129,20 @@
 
 	</div>
 
-		
+		<div class = "col-md-6">
+		<table  width="400" border="0" cellspacing="0">
+   
+   
+    <form name = "save" action ="#" method = "post"> <tr>
+        <td><textarea style="border: none" name="my_intorduce" cols="70" rows="40" ></textarea></td>
+    </tr>
+<input type = "submit" name = "save" value = "Save" border = "0"> </form>
+    <form enctype="file" accept = "image/jpg, image/gif">
+    	<input type = "file" accept = "image/jpg, image/gif">
+    </form>
+</table>
+
+	</div>
 </div>
 
 

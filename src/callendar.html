@@ -44,16 +44,10 @@
 
 	}
 
-	#map {
-        height: 600px;
-        width: 100%;
-        margin : 10px 10% 10px 40%;
-    	}
-
-	#logoutbutton
-	{
-		margin:8px 0px 0px 96%;
-	}
+#logoutbutton
+   {
+      margin:8px 0px 0px 96%;
+   }
 
 	#left
 	{
@@ -86,63 +80,31 @@
 
 
 	<dlv class = "collapsed navbar-brand-collapse" id = "bs-example-navbar-collapse-1">
-		<ul class = "nav navbar-nav">
-			
-			
-			<li><a href= "main.html">&nbsp; TIMELINE  &nbsp</a></li>
-			<li><a href= "photo.html">&nbsp PHOTOS &nbsp</a></li>
-			<li class = "active"><a href = "map.html">&nbsp MAP &nbsp <span class = "sr-only"></span></a></li>
-			<li><a href= "callendar.html" >&nbsp CALLENDAR &nbsp</a></li>
-			
+      <ul class = "nav navbar-nav">
+         
+         
+         <li><a href= "main.html" >&nbsp TIMELINE &nbsp</a></li>
+         <li><a href= "photo.html">&nbsp PHOTOS &nbsp</a></li>
+         <li><a href= "map.html">&nbsp MAP &nbsp</a></li>
+         <li class = "active"><a href = "callendar.html">&nbsp CALLENDAR &nbsp <span class = "sr-only"></span></a></li>
+         
+         <li class = "dropdown">
+         </li>
 
 
-		</ul>
-		<div id="logoutbutton">
-			<form name="logout" action="logout.php" method="get">
-				<input type="image" src="images/button.png" alt="logout button" width="35" height="35">
-			</form>
-		</div>
-	</div>
+      </ul>
+      <div id="logoutbutton">
+         <form name="logout" action="logout.php" method="get">
+            <input type="image" src="images/off.png" alt="logout button" width="35" height="35">
+         </form>
+      </div>
+   </div>
 </nav>
 
-
-<div class ="row">
-	<div class = "col-md-6">
-<section id="cd-timeline">
-	<div class="cd-timeline-block">
-		
- 
-		<div class="cd-timeline-content">
-			<div id="map"></div>
-    <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMIfugPnD-r028_O-OrSd4y2AQoJG2LpU&callback=initMap">
-    </script>
-			
-		</div> <!-- cd-timeline-content -->
-	</div> <!-- cd-timeline-block -->
- 
-	<div class="cd-timeline-block">
-		<!-- ... -->
+<div align= "cener">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=683ip96s7fm1ehk4robttebooo%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=Asia%2FSeoul" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 	</div>
-</section>
-
-	</div>
-
-		
-</div>
 
 
 
@@ -162,9 +124,5 @@
 <script src = "js/bootstrap.js"></script> 
 </body>
 </html>
-
-
-
-
 
 
