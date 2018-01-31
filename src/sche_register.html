@@ -2,70 +2,64 @@
 <html>
 <head>
 	<meta charset = "UTF-8">
-		<meta name = "viewport" content = "width=device-width", initail-scale = "1">
-		<link herf = "../css/bootstrap.css" rel = "stylesheet">
+		<meta name = "viewport" content = "width=device-width", initial-scale="1">
 		<title>Joeun_SignUp</title>
+		<link rel="stylesheet" href ="../css/bootstrap.css">
+</head>
+<body>
 	<style>
 	body{
-		background-color: #F8CBE4;
-	}
-	legend{
-		font-weight:bold;
-		font-family: 나눔고딕;
-	}
-	label{
-		font-family: 나눔고딕;
-		display: inline-block;
-		width: 140px;
-	}
-	input{
-		font-family: 나눔고딕;
-		display: inline-block;
-		width: 160px;
+		background-color:#F9EDF4;
 	}
 	.red{
 		color: red;
 	}
-	#ps{
-		font-style: italic;
-	}
 	</style>
-</head>
-<body>
-	<div id="page-wrap">
-		<form method="POST" action="../process/signup.php">
-			<div class = "col-sm-6 col-md-offset-3">
-			<!--<fieldset>-->
-				<form role = "form">
-				<legend>회원 가입</legend>
-				
+	
+	<article class = "container">
+		<div class = "page-header">
+			<div class = "col-md-6 col-md-offset-3">
+				<h3>회원가입 Form</h3>
+			</div>
+		</div>
+		<div class = "col-sm-6 col-md-offset-3">
+			<form role = "form">
 				<div class = "form-group">
-				<label for="id"><b class="red">* </b>ID</label>
-				<input type="text" class = "form-control" name="id" id="text1" placeholder = "ID 입력하세요. "/><br>
+					<label for = "Name"><b class = "red">* </b>Name</label>
+					<input type = "text" class = "form-control" id = "Name" placeholder = "이름을 입력하세요." style = "border: 1px solid pink">
 				</div>
 
-				<label for="pw1"><b class="red">* </b>Password</label>
-				
-				<input type="password" name="password1"/><br>
-				<label for="pw2"><b class="red">* </b>비밀번호 확인</label>
-				
-				<input type="password" name="password2"/><br>
-				<label for="name"><b class="red">* </b>이름</label>
-				
-				<input type="text" name="name"/><br>
-				<label for="birthday"><b class="red">* </b>생년월일</label>
-				
-				<input type="date" name="birthday" /><br>
-				<label for="tel">연락처</label>
-				
-				<input type="tel" name="tel"/><br><br>
-				<b class="red">* </b><b id="ps">: 필수 입력 정보입니다.</b>
-			<!--</fieldset>-->
-		</form>
+				<div class = "form-group">
+					<label for = "ID"><b class = "red">* </b>ID</label>
+					<input type = "text" class = "form-control" id = "ID" placeholder = "ID 입력하세요." style = "border: 1px solid pink">
+				</div>
+
+				<div class = "form-group">
+					<label for = "Password"><b class = "red">* </b>Password</label>
+					<input type = "text" class = "form-control" id = "Password" placeholder = "비밀번호를 입력하세요." style = "border: 1px solid pink">
+				</div>
+
+				<div class = "form-group">
+					<label for = "AgainPassword"><b class = "red">* </b>Password</label>
+					<input type = "text" class = "form-control" id = "AgainPassword" placeholder = "비밀번호를 다시 입력하세요." style = "border: 1px solid pink">
+				</div>
+
+				<div class = "form-group">
+					<label for = "Date"><b class = "red">* </b>Date</label>
+					<input type = "date" class = "form-control" id = "Date" style = "border: 1px solid pink">
+				</div>
+
+				<div class = "form-group">
+					<label for = "Tel">Tel</label>
+					<input type = "tel" class = "form-control" id = "Tel" placeholder = "전화번호를 입력해주세요." style = "border: 1px solid pink">
+				</div>
+
+				<div class = "form-group">
+					<label for = "Email">Email</label>
+					<input type = "email" class = "form-control" id = "InputEmail" placeholder = "이메일을 입력해주세요." style = "border: 1px solid pink">
+				</div>
+			</form>
 		</div>
-			<input type="button" value="back" onclick="window.location.href='login.html'"/>
-			<input type="submit" name="join" value="okay"/>
-		</form>
-	</div>
+	</article>
 </body>
 </html>
