@@ -2,9 +2,9 @@
 <html>
 <head>
 	<meta charset = "UTF-8">
-	<meta name = "viewport" content = "width=device-width", initail-scale = "1">
-	<link herf = "../css/bootstrap.min.css" rel = "stylesheet">
-	<title>Joeun_SignUp</title>
+		<meta name = "viewport" content = "width=device-width", initail-scale = "1">
+		<link herf = "../css/bootstrap.css" rel = "stylesheet">
+		<title>Joeun_SignUp</title>
 	<style>
 	body{
 		background-color: #F8CBE4;
@@ -29,17 +29,19 @@
 	#ps{
 		font-style: italic;
 	}
-</style>
+	</style>
 </head>
 <body>
 	<div id="page-wrap">
 		<form method="POST" action="../process/signup.php">
+			<div class = "col-sm-6 col-md-offset-3">
 			<!--<fieldset>-->
+				<form role = "form">
 				<legend>회원 가입</legend>
 				
 				<div class = "form-group">
 				<label for="id"><b class="red">* </b>ID</label>
-				<input type="text" class = "form-control" name="id" id="text1"/><br>
+				<input type="text" class = "form-control" name="id" id="text1" placeholder = "ID 입력하세요. "/><br>
 				</div>
 
 				<label for="pw1"><b class="red">* </b>Password</label>
@@ -59,6 +61,8 @@
 				<input type="tel" name="tel"/><br><br>
 				<b class="red">* </b><b id="ps">: 필수 입력 정보입니다.</b>
 			<!--</fieldset>-->
+		</form>
+		</div>
 			<input type="button" value="back" onclick="window.location.href='login.html'"/>
 			<input type="submit" name="join" value="okay"/>
 		</form>
