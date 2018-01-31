@@ -1,3 +1,10 @@
+<?php 
+  require_once("../process/authentication.php");
+  require_once('../process/db_connect.php');
+
+  $id = $_SESSION['user_id'];
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,10 +89,10 @@
 	<dlv class = "collapsed navbar-brand-collapse" id = "bs-example-navbar-collapse-1">
       <ul class = "nav navbar-nav">
          
-         <li class = "active"><a href = "#">&nbsp TIMELINE &nbsp <span class = "sr-only"></span></a></li>
-         <li><a href= "#">&nbsp PHOTOS &nbsp</a></li>
-         <li><a href= "#">&nbsp MAP &nbsp</a></li>
-         <li><a href= "#" >&nbsp CALLENDAR &nbsp</a></li>
+         <li class = "active"><a href = "#">&nbsp; TIMELINE &nbsp; <span class = "sr-only"></span></a></li>
+         <li><a href= "#">&nbsp; PHOTOS &nbsp;</a></li>
+         <li><a href= "#">&nbsp; MAP &nbsp;</a></li>
+         <li><a href= "#" >&nbsp; CALLENDAR &nbsp;</a></li>
          
          <li class = "dropdown">
          </li>
@@ -93,7 +100,7 @@
 
       </ul>
       <div id="logoutbutton">
-         <form name="logout" action="../process/logout.php" method="get">
+         <form name="logout" action="../process/logout.php" method="post">
             <input type="image" src="../images/off.png" alt="logout button" width="35" height="35">
          </form>
       </div>

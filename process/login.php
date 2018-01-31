@@ -1,8 +1,13 @@
 <?php 
 /*This is login php. To do this process, have to connect with MySQL*/
-	require_once('../process/db_connect.php')
+// in local host
+	require_once('../process/db_connect.php');
+  $id = $_POST['userID'];
+  $pw = $_POST['userPassword'];
+
+
 /* check ID and Password*/
-	if(!isset($id) || !isset($pw)){
+	if(!isset($id) || !isset($id)){
 		echo "<script>alert('아이디와 비밀번호가 유효하지 않습니다.'<br> '정확히 입력해주세요.');history.back();</script>";
 		exit;
 	}
@@ -13,13 +18,13 @@
   	if($result){
       //Login fail
       	if(mysqli_num_rows($result) == 0){
-   			echo"<script>alert(\"아이디와 비밀번호 정보가 일치하지 않습니다.\");history.back()</script>";
+   			echo "<script>alert(\"아이디와 비밀번호 정보가 일치하지 않습니다.\");history.back()</script>";
       	}
       //Login success
       	else{
            session_start(); 
-			    $_SESSION['userID'] = $id;
-			    echo"<script>location.href='../src/main.html';</script>";
+			    $_SESSION['user_id'] = $id;
+			    echo"<script>location.href='../src/main.php';</script>";
       	}
   	}
   	else{
