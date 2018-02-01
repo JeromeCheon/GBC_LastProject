@@ -65,8 +65,13 @@
 
 	}
 
-	button{
-	  background:#7D7D7D;
+	#blank{
+		margin: 10px;
+		display: inline;
+	}
+
+	.but{
+	  background:#D6D5D5;
 	  color:#fff;
 	  border:none;
 	  position:relative;
@@ -77,27 +82,27 @@
 	  transition:800ms ease all;
 	  outline:none;
 	}
-	button:hover{
+	.but:hover{
 	  background:#fff;
-	  color:#7D7D7D;
+	  color:#D6D5D5;
 	}
-	button:before,button:after{
+	.but:before,.but:after{
 	  content:'';
 	  position:absolute;
 	  top:0;
 	  right:0;
 	  height:2px;
 	  width:0;
-	  background: #7D7D7D;
+	  background: #D6D5D5;
 	  transition:400ms ease all;
 	}
-	button:after{
+	.but:after{
 	  right:inherit;
 	  top:inherit;
 	  left:0;
 	  bottom:0;
 	}
-	button:hover:before,button:hover:after{
+	.but:hover:before, .but:hover:after{
 	  width:100%;
 	  transition:800ms ease all;
 	}
@@ -206,11 +211,12 @@
 	        <td><textarea style="border: none" name="my_intorduce" cols="70" rows="40" ></textarea></td>
 	    </tr>
 
-			<button type = "submit" name = "save" value = "Save" border = "0"> Save</button></form>
+			<div id="blank"><input type = "submit" class = "but" name = "save" value = "Save" border = "0" style = "color:black"></input></div></form>
 	    
 	    <form enctype="file" accept = "image/jpg, image/gif">
-	    	<button type = "file" accept = "image/jpg, image/gif">파일 선택
-	    	</button>
+	    	<div id="blank">
+	    	<input type = "file" class = "but" accept = "image/jpg, image/gif" style = "color:black">
+	    	</input></div>
 	    </form>
     	</div>
 	</div>
