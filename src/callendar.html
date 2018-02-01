@@ -4,8 +4,8 @@
 	<meta charset = "UTF-8">
 	<meta name = "viewport" content = "width = device - width", initial - scale = "1">
 	<title>Joeun</title>
-	<link rel = "stylesheet" href = "css/bootstrap.css">
-	<link rel = "stylesheet" href = "css/codingbooster.css">
+	<link rel = "stylesheet" href = "../css/bootstrap.css">
+	<link rel = "stylesheet" href = "../css/codingbooster.css">
 
 </head>
 <body>
@@ -23,7 +23,7 @@
 		height: 80px;
 	}
 	.navbar-brand{
-		background-image: url('images/off.png'); 
+		background-image: url('../images/off.png'); 
 		background-size: cover;
 	
 		
@@ -31,14 +31,14 @@
 
 	.navbar-right
 	{
-		background-image: url('images/logout.png'); 
+		background-image: url('../images/logout.png'); 
 		background-size: auto;
 
 
 	}
 	.btn-image
 	{
-		background-image: url('images/off.png'); 
+		background-image: url('../images/off.png'); 
 		background-size: auto;
 
 
@@ -83,10 +83,10 @@
       <ul class = "nav navbar-nav">
          
          
-         <li><a href= "main.html" >&nbsp TIMELINE &nbsp</a></li>
-         <li><a href= "photo.html">&nbsp PHOTOS &nbsp</a></li>
-         <li><a href= "map.html">&nbsp MAP &nbsp</a></li>
-         <li class = "active"><a href = "callendar.html">&nbsp CALLENDAR &nbsp <span class = "sr-only"></span></a></li>
+         <li><a href= "../src/main.html" >&nbsp TIMELINE &nbsp</a></li>
+         <li><a href= "../src/photo.html">&nbsp PHOTOS &nbsp</a></li>
+         <li><a href= "../src/map.html">&nbsp MAP &nbsp</a></li>
+         <li class = "active"><a href = "../src/callendar.html">&nbsp CALLENDAR &nbsp <span class = "sr-only"></span></a></li>
          
          <li class = "dropdown">
          </li>
@@ -94,8 +94,8 @@
 
       </ul>
       <div id="logoutbutton">
-         <form name="logout" action="logout.php" method="get">
-            <input type="image" src="images/off.png" alt="logout button" width="35" height="35">
+         <form name="logout" action="../process/logout.php" method="get">
+            <input type="image" src="../images/off.png" alt="logout button" width="35" height="35">
          </form>
       </div>
    </div>
