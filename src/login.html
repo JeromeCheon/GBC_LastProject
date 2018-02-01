@@ -7,32 +7,32 @@
 		<link rel="stylesheet" href ="../css/bootstrap.css">
 </head>
 <body>
-	<style type = "text/css">
-			.jumbotron{
-				background-image: url("../images/neon.png");
-				background-size: cover;
-				text-shadow: black 0.2em 0.2em 0.2em;
-				color: black;
-			}
-			.ct-btn 
+	<style>
+		body{
+			text-shadow: black 0.1em 0.1em 0.1em;
+			background-color: #F8F8F7;
+		} 
 	</style>
+
 	<div class ="container">
-		<!--<div class = "col-lg-4"></div>-->
-		<div class = "col-lg-4">
-			<div class = "jumbotron" style = "width:auto; height:auto">
-				<form method="post" action="../process/login.php">
-					<div class = "form-group", style = "text-align:center">
-						<center><input type = "text" class = "form-control" placeholder = "아이디" name = "userID" maxlength = "20" style = "width:auto; border: 1px solid pink"></center>
-					</div>
-					<div class = "form-group", style = "text-align:center">
-						<center><input type = "password" class = "form-control" placeholder = "비밀번호" name = "userPassword" maxlength = "20" style = "width:auto; border: 1px solid pink"></center>
-					</div>
-					<center><button type = "submit" class="btn btn-primary form-control" style = "width:auto; background-color:#FCFADB ; border: 1px solid pink; color:black" >Login</button></center>
-				</form>
-					<a href = "../src/sche_register.html"><center><button class="btn btn-primary form-control" style = "width:auto; color:black; border: 1px solid pink; background-color: #FCFADB">Sign up</button></center></a>
-			</div>
+		<div class = "col-md-6 col-md-offset-3">
+		
+			<form method="post" action="../process/login.php">
+				<h3 style = "text-align: center; font-size:3.3em";>Login</h3>
+				<div class = "form-group", style = "text-align:center">
+					<center><input type = "text" class = "form-control" placeholder = "아이디" name = "userID" maxlength = "20" style = "border: 1px solid black"></center>
+				</div>
+
+				<div class = "form-group", style = "text-align:center">
+					<center><input type = "password" class = "form-control" placeholder = "비밀번호" name = "userPassword" maxlength = "20" style = "border: 1px solid black"></center>
+				</div>
+				
+				<center><button type = "submit" class="btn btn-primary form-control" style = "background-color:#C6C6C5 ; border: 1px solid black; color:black" >Login</button>
+				</center>
+
+			</form>
+				<a href = "../src/sche_register.html"><center><button class="btn btn-primary form-control" style = "color:black; border: 1px solid black; background-color: #C6C6C5">Sign up</button></center></a>
 		</div>
-		<div class="col-lg-4"></div>
 	</div>
 	<script src = "http://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script> src = "js/bootstrap.js"></script>
