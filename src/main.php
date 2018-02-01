@@ -72,27 +72,53 @@
 		border : lightgray;
 
 	}
+	button{
+	  background:#7D7D7D;
+	  color:#fff;
+	  border:none;
+	  position:relative;
+	  height:30px;
+	  font-size:1em;
+	  padding:0.2em;
+	  cursor:pointer;
+	  transition:800ms ease all;
+	  outline:none;
+	}
+	button:hover{
+	  background:#fff;
+	  color:#7D7D7D;
+	}
+	button:before,button:after{
+	  content:'';
+	  position:absolute;
+	  top:0;
+	  right:0;
+	  height:2px;
+	  width:0;
+	  background: #7D7D7D;
+	  transition:400ms ease all;
+	}
+	button:after{
+	  right:inherit;
+	  top:inherit;
+	  left:0;
+	  bottom:0;
+	}
+	button:hover:before,button:hover:after{
+	  width:100%;
+	  transition:800ms ease all;
+	}
+
 </style>
 <nav class = "navbar navbar-default">
 	<div class = "container-fluid">
-		<div class = "navbar-header">
-			<button type = "button" class = "navbar-toggle collapsed" data-toggle = "collapse"
-			data-target = "#bs-example-navbar-collapse-1" aria-expanded = "false" >
-			<span class = "sr-only"></span>
-			<span class = "icon-bar"></span>
-			<span class = "icon-bar"></span>
-			<span class = "icon-bar"></span>
-		</button>
-	</div>
-
-
 	<dlv class = "collapsed navbar-brand-collapse" id = "bs-example-navbar-collapse-1">
       <ul class = "nav navbar-nav">
          
-         <li class = "active"><a href = "#">&nbsp; TIMELINE &nbsp; <span class = "sr-only"></span></a></li>
-         <li><a href= "#">&nbsp; PHOTOS &nbsp;</a></li>
-         <li><a href= "#">&nbsp; MAP &nbsp;</a></li>
-         <li><a href= "#" >&nbsp; CALLENDAR &nbsp;</a></li>
+         <li class = "active"><a href = "../src/main.php">&nbsp; TIMELINE &nbsp; <span class = "sr-only"></span></a></li>
+         <li><a href= "../src/photo.html">&nbsp; PHOTOS &nbsp;</a></li>
+         <li><a href= "../src/map.html">&nbsp; MAP &nbsp;</a></li>
+         <li><a href= "../src/callender.html" >&nbsp; CALLENDAR &nbsp;</a></li>
          
          <li class = "dropdown">
          </li>
@@ -104,6 +130,7 @@
             <input type="image" src="../images/off.png" alt="logout button" width="35" height="35">
          </form>
       </div>
+   </dlv>
    </div>
 </nav>
 
@@ -138,20 +165,24 @@
 
 		<div class = "col-md-6">
 		<table  width="400" border="0" cellspacing="0">
-   
+    <div class = "container">
+   	<div class = "form-group text-center">
    
     <form name = "save" action ="#" method = "post"> <tr>
         <td><textarea style="border: none" name="my_intorduce" cols="70" rows="40" ></textarea></td>
     </tr>
-<input type = "submit" name = "save" value = "Save" border = "0"> </form>
-    <form enctype="file" accept = "../image/jpg, image/gif">
-    	<input type = "file" accept = "../image/jpg, image/gif">
+<button type = "submit" name = "save" value = "Save" border = "0">Save </button> </form>
+    <form enctype="file" accept = "image/jpg, image/gif">
+    	<button type = "file" accept = "image/jpg, image/gif">파일 선택
+    	</button>
     </form>
-</table>
+
 
 	</div>
 </div>
-
+</table>
+	</div>
+</div>
 
 
 <footer style = "background-color:  #DAD9D9; color: #000000">
