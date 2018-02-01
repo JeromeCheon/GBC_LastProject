@@ -67,11 +67,11 @@
 				<div class = "form-group">
 					<label>약관 동의</label>
 					<div data-toggle = "buttons">
-						<label class = "btn btn-primary active" style = "background-color: white; border: 1px solid white">
-							<span class = "fa fa-check"></span>
-							<input id = "agree" type = "checkbox" autocomplete = "off" check>
-						</label>
-						<a href = "#" style = "color: red">이용약관</a>에 동의합니다. 
+						<form>
+							  <div>
+							    <input type="checkbox" id="subscribeNews" name="agree" value="newsletter">
+							<a href = "#" style = "color: red" >이용약관</a>에 동의합니다. 
+						</form>
 					</div>
 				</div>
 			
@@ -79,8 +79,7 @@
 					<button type = "submit" id="join-submit" class = "btn btn-primary" href = "../process/signup.php" style = "background-color:#8D8D8C; border: 1px solid white " >회원가입<i class ="fa fa-check spaceLeft"></i>
 					</button>
 
-					<button type = "submit" class = "btn btn-warning" style = "background-color:#C6C6C5; border: 1px solid white" onclick="javascript:history.go(-1)">가입취소 <i class ="fa fa-times spaceLeft" ></i>
-					</button>
+					<input type = "button" class = "btn btn-warning" value = "가입취소" style = "background-color:#C6C6C5; border: 1px solid white" onclick="javascript:history.go(-1)"><i class ="fa fa-times spaceLeft" ></i>
 				</div>
 			</form>
 		</div>
