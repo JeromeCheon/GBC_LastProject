@@ -35,6 +35,7 @@
     else{
       echo"<script>alert(\"Database Error\". 등록하지 못하였습니다.);history.back()</script>";
     }
+    
   } 
   mysqli_close($conn);
 ?>  

@@ -114,16 +114,11 @@
 	<div class = "container-fluid">
 	<dlv class = "collapsed navbar-brand-collapse" id = "bs-example-navbar-collapse-1">
       <ul class = "nav navbar-nav">
-         
          <li class = "active"><a href = "../src/main.php">&nbsp; TIMELINE &nbsp; <span class = "sr-only"></span></a></li>
          <li><a href= "../src/photo.html">&nbsp; PHOTOS &nbsp;</a></li>
          <li><a href= "../src/map.html">&nbsp; MAP &nbsp;</a></li>
-         <li><a href= "../src/callender.html" >&nbsp; CALLENDAR &nbsp;</a></li>
-         
-         <li class = "dropdown">
-         </li>
-
-
+         <li><a href= "../src/callender.html" >&nbsp; CALLENDAR &nbsp;</a></li>  
+         <li class = "dropdown"></li>
       </ul>
       <div id="logoutbutton">
          <form name="logout" action="../process/logout.php" method="post">
@@ -133,57 +128,50 @@
    </dlv>
    </div>
 </nav>
+<!--여기까지 네비게이션 바 끝-->
 
-
-<div class ="row"
-                     text-align     :left">
+<div class ="row" text-align :left">
 	<div class = "col-md-6">
-<section id="cd-timeline">
-	<div class="cd-timeline-block" style="vertical-align :middle;
-                     text-align     :right">
-		<div class="cd-timeline-img">
-			<img src="../images/logo.png" alt="Picture">
-		</div> <!-- cd-timeline-img -->
- 
-		<div class="cd-timeline-content" style="vertical-align :middle;
-                     text-align     :left">
-
-
-			<h2>Title of section 1</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-			<a href="#" class="cd-read-more">Read more</a>
-			<span class="cd-date">Jan 14</span>
-		</div> <!-- cd-timeline-content -->
-	</div> <!-- cd-timeline-block -->
- 
-	<div class="cd-timeline-block">
+		<section id="cd-timeline">
+			<div class="cd-timeline-block" style="vertical-align :middle; text-align :right">                    
+				<div class="cd-timeline-img">
+					<img src="../images/logo.png" alt="Picture">
+				</div> <!-- cd-timeline-img -->
+				<div class="cd-timeline-content" style="vertical-align :middle;
+                     text-align     :left">	
+					<h2>Title of section 1</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+					<a href="#" class="cd-read-more">Read more</a>
+					<span class="cd-date">Jan 14</span>
+				</div> <!-- cd-timeline-content -->
+			</div> <!-- cd-timeline-block -->
+			<div class="cd-timeline-block"></div>
 		<!-- ... -->
+		</section>
 	</div>
-</section>
-
-	</div>
-
-		<div class = "col-md-6">
+	<div class = "col-md-6">
 		<table  width="400" border="0" cellspacing="0">
-    <div class = "container">
-   	<div class = "form-group text-center">
-   
-    <form name = "save" action ="#" method = "post"> <tr>
-        <td><textarea style="border: none" name="my_intorduce" cols="70" rows="40" ></textarea></td>
-    </tr>
-<button type = "submit" name = "save" value = "Save" border = "0">Save </button> </form>
-    <form enctype="file" accept = "image/jpg, image/gif">
-    	<button type = "file" accept = "image/jpg, image/gif">파일 선택
-    	</button>
-    </form>
-
-
+    		<div class = "container">
+   				<div class = "form-group text-center" name = "right">
+    				<form name = "saving" action ="#" method = "post"> 
+        			<tr><td><textarea style="border: none" name="my_intorduce" cols="70" rows="40" ></textarea></td></tr>
+					<button type = "submit" name = "save" value = "Save" border = "0">Save </button>
+					</form>
+    				<form enctype="multipart/form-data" accept = "image/jpg, image/gif" method="POST" action = "../process/save_img.php">
+    					<input type=hidden name=mode value=insert>
+						<table>
+						<tr> <td>올릴 이미지: </td>
+						<td><button type="file" name="images" accept = "image/jpg, image/gif">파일 선택</button></td></tr>
+						<tr> <td colspan = 2>
+						<input type='submit' value='이미지 전송 '></td></tr>
+						</table>
+    					<!--<button type = "file" accept = "image/jpg, image/gif">파일 선택</button>-->
+    				</form>
+				</div>
+			</div>
+		</table>
 	</div>
 </div>
-</table>
-	</div>
-</div>
-
 
 <footer style = "background-color:  #DAD9D9; color: #000000">
 	<div class = "row">
@@ -195,7 +183,6 @@
 	</div>
 </div>
 </footer>
-
 
 <script src = "http://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src = "js/bootstrap.js"></script> 
