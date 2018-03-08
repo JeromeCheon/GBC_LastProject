@@ -138,7 +138,14 @@
 					<img src="../images/logo.png" alt="Picture">
 				</div> <!-- cd-timeline-img -->
 				<div class="cd-timeline-content" style="vertical-align :middle;
-                     text-align     :left">	
+                     text-align     :left">
+                    <?php
+                     require_once("../process/db_connect.php");
+                     $sql = 'select title, content, w_date from userPlan';
+                     $result = mysqli_query($sql, $db); 
+                     $row = mysqli_fetch_assoc($result);
+
+                    ?> <!--여기까지가 수정한 부분... 그 이상 다시 해봐야.-->	
 					<h2>Title of section 1</h2>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
 					<a href="#" class="cd-read-more">Read more</a>
@@ -149,12 +156,21 @@
 		<!-- ... -->
 		</section>
 	</div>
+
+	<!-- timeline에서 오른쪽 반 페이지에 해당하는 부분-->
 	<div class = "col-md-6">
 		<table  width="400" border="0" cellspacing="0">
     		<div class = "container">
    				<div class = "form-group text-center" name = "right">
-    				<form name = "saving" action ="#" method = "post"> 
-        			<tr><td><textarea style="border: none" name="my_intorduce" cols="70" rows="40" ></textarea></td></tr>
+    				<form name = "saving" action ="../process/save_plan.php" method = "post">
+    				<tr>
+    					<th scope="row"><label for="uTitle">제목</label></th>
+    					<td class="title"><input type="text" style="border:none" name="uTitle" id="uTitle"></td>
+    				</tr>
+        			<tr>
+        				<th scope="row"><label for="uContent">내용 &nbsp;</label></th>
+        				<td><textarea style="border: none" name="uContent" cols="70" rows="40" id="uContent"></textarea></td>
+        			</tr>
 					<button type = "submit" name = "save" value = "Save" border = "0">Save </button>
 					</form>
     				<form enctype="multipart/form-data" accept = "image/jpg, image/gif" method="POST" action = "../process/save_img.php">
